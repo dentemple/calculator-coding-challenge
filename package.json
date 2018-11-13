@@ -2,8 +2,8 @@
   "name": "calculator-coding-challenge",
   "version": "1.0.0",
   "license": "MIT",
-  "script": {
-    "start": "",
+  "scripts": {
+    "start": "webpack-dev-server --hot",
     "test": "jest -i"
   },
   "dependencies": {
@@ -22,6 +22,7 @@
     "@babel/preset-env": "^7.1.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
+    "babel-plugin-styled-components": "^1.8.0",
     "css-loader": "^1.0.1",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
