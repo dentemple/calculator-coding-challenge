@@ -1,26 +1,28 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import { Title } from '../components'
+import Calculator from './Calculator'
 
 // Dev only
 import RenderStore from '../util/RenderStore'
 
-const Container = styled.div`
+const Display = styled.div`
+  /* display */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* text */
   font-family: sans-serif;
 `
 
-class App extends Component {
-  render() {
-    return (
-      <Container>
-        <Title />
-        <footer>
-          <RenderStore />
-        </footer>
-      </Container>
-    )
-  }
-}
+const App = () => (
+  <Display>
+    <Calculator />
+    <footer>
+      <RenderStore />
+    </footer>
+  </Display>
+)
 
 export default App

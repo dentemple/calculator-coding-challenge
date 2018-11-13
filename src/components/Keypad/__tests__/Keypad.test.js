@@ -1,8 +1,8 @@
 import React from 'react'
-import MyComponent from '../App'
+import MyComponent from '../../Keypad'
 
 describe('components', () => {
-  describe('App', () => {
+  describe('Keypad', () => {
     it('renders without crashing', () => {
       shallow(<MyComponent />)
     })
