@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
+
+const SubInput = ({ value }) => <StyledInput readOnly value={value} />
 
 const StyledInput = styled.input`
   /* box */
@@ -15,6 +18,8 @@ const StyledInput = styled.input`
   text-align: right;
 `
 
-const SubInput = () => <StyledInput readOnly value={0} />
+SubInput.propTypes = {
+  value: PropTypes.string
+}
 
 export default SubInput

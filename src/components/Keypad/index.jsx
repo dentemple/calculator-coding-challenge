@@ -2,17 +2,24 @@ import React from 'react'
 import styled from 'styled-components'
 
 import InputKey from './InputKey'
-
-const StyledSection = styled.section``
+import BUTTONS from './BUTTONS'
 
 const Keypad = () => (
   <StyledSection>
-    <InputKey value={0} />
-    <InputKey value={1} />
-    <InputKey value={2} />
-    <InputKey value={3} />
-    <InputKey value={4} />
+    {BUTTONS.map(button => (
+      <InputKey readOnly key={button.value} {...button} />
+    ))}
   </StyledSection>
 )
+
+const StyledSection = styled.section`
+  /* display */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  /* box */
+  padding: 10px;
+`
 
 export default Keypad
